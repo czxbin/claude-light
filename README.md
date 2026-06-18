@@ -44,6 +44,14 @@ $env:PYTHONPATH = "src"
 python -m claude_monitor.app
 ```
 
+If `%LOCALAPPDATA%` is not writable in your current shell, point both the
+monitor and hook writer at a project-local status file:
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m claude_monitor.app --status-file .\.runtime\status.txt
+```
+
 ## Test
 
 ```powershell

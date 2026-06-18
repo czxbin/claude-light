@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -117,9 +118,16 @@ def place_bottom_right(window: QWidget) -> None:
     )
 
 
-def main() -> int:
-    app = QApplication(sys.argv)
-    window = MonitorWindow()
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Run the Claude monitor window.")
+    parser.add_argument("--status-file", type=Path, default=default_status_path())
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    app = QApplication([sys.argv[0]])
+    window = MonitorWindow(args.status_file)
     place_bottom_right(window)
     window.show()
     return app.exec()
