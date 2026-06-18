@@ -29,4 +29,4 @@
 - [x] 5.1 Add unit tests for status parsing and atomic writer behavior
 - [x] 5.2 Add a non-blocking smoke test for importing the monitor application modules
 - [x] 5.3 Add documentation for running, testing, hook setup, and packaging as a Windows `.exe`
-- [ ] 5.4 Run verification commands and record results in the OpenSpec verify artifact during apply
+- [x] 5.4 Run verification commands and record results in the OpenSpec verify artifact during apply
