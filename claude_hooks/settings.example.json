@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pythonw.exe -m claude_monitor.hook_writer waiting"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pythonw.exe -m claude_monitor.hook_writer idle"
+          }
+        ]
+      }
+    ]
+  }
+}

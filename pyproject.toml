@@ -1,0 +1,22 @@
+[project]
+name = "claude-monitor"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "PySide6>=6.7",
+  "watchdog>=4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pyinstaller>=6.0",
+]
+
+[project.scripts]
+claude-monitor = "claude_monitor.app:main"
+claude-monitor-write-status = "claude_monitor.hook_writer:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

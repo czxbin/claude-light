@@ -1,0 +1,9 @@
+.venv/
+.tmp/
+.uv-cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+dist/
+build/
+*.spec
